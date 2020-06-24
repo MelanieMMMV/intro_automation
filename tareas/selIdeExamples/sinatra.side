@@ -1,55 +1,48 @@
 {
-  "id": "ee843cf5-5671-4f4b-bcaa-6d9e018c0bc8",
+  "id": "2d10cd6d-d72e-43c4-9249-557617ef03e0",
   "version": "2.0",
-  "name": "sinatra",
-  "url": "https://songs-by-sinatra.herokuapp.com",
+  "name": "Sinatra",
+  "url": "https://evening-bastion-49392.herokuapp.com",
   "tests": [{
-    "id": "0c5549e9-1d2b-492c-a111-a52c1e082223",
-    "name": "list a song",
+    "id": "3985f0cf-c173-4a45-b08d-de8bd73f9f5a",
+    "name": "login",
     "commands": [{
-      "id": "894d1d35-7575-416a-b903-6e9e5e140797",
-      "comment": "paso 1",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b1dd7097-2d93-4847-9029-d4de2107291f",
+      "id": "ebacb291-d332-461f-a002-b4b22a288f77",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "0e34bea6-74ca-4ec9-bece-82a202bfbad9",
-      "comment": "verificacion 1",
-      "command": "",
-      "target": "",
+      "id": "7e741bd0-0d83-4c78-a6ba-c22a59ce76bd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "615x708",
       "targets": [],
       "value": ""
     }, {
-      "id": "3edec751-922b-45f3-b78e-6390a4d7a02b",
+      "id": "bf682a94-a81e-4f8a-a52f-8820948b264f",
       "comment": "",
-      "command": "verifyElementPresent",
+      "command": "assertText",
       "target": "linkText=Home",
       "targets": [],
-      "value": ""
+      "value": "Home"
     }, {
-      "id": "ae6af39c-b6b2-4857-8bb3-2b5e6a41875a",
+      "id": "5685f015-9f56-436e-b848-041e0b1d1c61",
       "comment": "",
-      "command": "verifyElementPresent",
-      "target": "//*[@src='/images/sinatra.jpg']",
-      "targets": [],
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.current", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
       "value": ""
     }, {
-      "id": "ec218305-b204-4655-a349-ede681a5300c",
-      "comment": "",
-      "command": "verifyElementPresent",
-      "target": "linkText=log in",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7e81203d-e8ca-4490-9396-66d0099c659a",
+      "id": "a26d7362-7235-4bf8-b1b3-2901112d2ec9",
       "comment": "",
       "command": "click",
       "target": "linkText=log in",
@@ -63,7 +56,7 @@
       ],
       "value": ""
     }, {
-      "id": "88d7da5c-017f-48d0-a238-37bbc057503c",
+      "id": "54c99fa2-7698-4119-ac76-54490bf858bd",
       "comment": "",
       "command": "click",
       "target": "id=username",
@@ -76,7 +69,7 @@
       ],
       "value": ""
     }, {
-      "id": "6f44ed54-3ba0-4507-974f-41f49c4559e7",
+      "id": "4cadf798-1cb5-429d-9724-9e1066831c2e",
       "comment": "",
       "command": "type",
       "target": "id=username",
@@ -89,7 +82,20 @@
       ],
       "value": "frank"
     }, {
-      "id": "1ade8461-f6c7-4fe4-baec-0ef1c7cc8cc2",
+      "id": "7555c8a5-0c06-49df-9098-4122f1b40996",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe71aac6-1240-45b7-a952-22304ca82ad9",
       "comment": "",
       "command": "type",
       "target": "id=password",
@@ -102,7 +108,7 @@
       ],
       "value": "sinatra"
     }, {
-      "id": "2bf1d28b-a969-4665-a848-c57d77478390",
+      "id": "ec2f26f8-f9e0-4f58-9f9f-ff0c4e81b1b5",
       "comment": "",
       "command": "click",
       "target": "css=input:nth-child(5)",
@@ -113,91 +119,54 @@
       ],
       "value": ""
     }, {
-      "id": "059c18ed-99ad-4db9-9e16-3bca6ca60b2c",
-      "comment": "",
-      "command": "waitForElementVisible",
-      "target": "linkText=log out",
-      "targets": [],
-      "value": "5000"
-    }, {
-      "id": "4f68f69b-97fd-4204-9a6b-cd3886c96ebb",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "linkText=log out",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "23ef0681-dbf6-44f8-bdcb-eaaebf1332e1",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "id=flash",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a07da514-5cd3-4445-8b06-f09af1a7704d",
-      "comment": "",
-      "command": "assertText",
-      "target": "id=flash",
-      "targets": [],
-      "value": "You are now logged in as frank"
-    }, {
-      "id": "21cfdc0a-8746-4901-be0a-84f24b28d9c7",
+      "id": "c40a9567-7d58-4f29-9fa1-b202f450f156",
       "comment": "",
       "command": "click",
-      "target": "linkText=Songs",
+      "target": "css=.flash",
       "targets": [
-        ["linkText=Songs", "linkText"],
-        ["css=li:nth-child(4) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
-        ["xpath=//li[4]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+        ["css=.flash", "css:finder"],
+        ["xpath=//div[@id='flash']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "9fb546dc-2a15-4736-85eb-1a5ec44b9046",
+      "id": "5c04b0f3-d16d-446a-9ca0-910244229037",
       "comment": "",
       "command": "click",
-      "target": "linkText=Come Fly With Me",
+      "target": "css=h1:nth-child(2)",
       "targets": [
-        ["linkText=Come Fly With Me", "linkText"],
-        ["css=li:nth-child(28) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Come Fly With Me')]", "xpath:link"],
-        ["xpath=//ul[@id='songs']/li[28]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/songs/278')]", "xpath:href"],
-        ["xpath=//li[28]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Come Fly With Me')]", "xpath:innerText"]
+        ["css=h1:nth-child(2)", "css:finder"],
+        ["xpath=//section/h1", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "27bf8938-7e45-44c0-ad1b-b29e068ae4c2",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//input[@value='Like']",
-      "targets": [
-        ["css=form:nth-child(2) > input", "css:finder"],
-        ["xpath=//input[@value='Like']", "xpath:attributes"],
-        ["xpath=//div[@id='like']/form/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "16a49a87-1cd6-4490-876b-daf13c4fcbc0",
+      "id": "6b67b53a-d1ed-4c74-bca4-1c5f4812f057",
       "comment": "",
       "command": "click",
       "target": "linkText=log out",
-      "targets": [],
+      "targets": [
+        ["linkText=log out", "linkText"],
+        ["css=footer > a", "css:finder"],
+        ["xpath=//a[contains(text(),'log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'log out')]", "xpath:innerText"]
+      ],
       "value": ""
     }]
+  }, {
+    "id": "0afea0fc-c484-4722-bd60-f2e51a188ef9",
+    "name": "logout",
+    "commands": []
   }],
   "suites": [{
-    "id": "fe3465ba-f5e7-4b49-86e0-dd17980a17b7",
+    "id": "54b94cb3-7d17-41b6-805e-88f8b1e4d581",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["0c5549e9-1d2b-492c-a111-a52c1e082223"]
+    "tests": ["3985f0cf-c173-4a45-b08d-de8bd73f9f5a"]
   }],
-  "urls": ["https://songs-by-sinatra.herokuapp.com/"],
+  "urls": ["https://evening-bastion-49392.herokuapp.com/"],
   "plugins": []
 }
